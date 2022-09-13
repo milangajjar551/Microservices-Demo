@@ -1,0 +1,31 @@
+﻿{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7062"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/gateway/account",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/account",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 4201
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/user",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/user",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 4202
+        }
+      ]
+    }
+  ]
+}

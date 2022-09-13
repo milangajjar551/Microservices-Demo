@@ -1,0 +1,16 @@
+version: '3.5'
+services:
+  AccountService:
+   image: ${DOCKER_REGISTRY-}accountsmicroservice:v1
+   build:
+    context: ./AccountsMicroServices
+    dockerfile: Dockerfile
+   ports:
+    - "4201:80"
+  UserService:
+   image: ${DOCKER_REGISTRY-}usermicroservice:v1
+   build:
+    context: ./UserMicroServices
+    dockerfile: Dockerfile
+   ports:
+    - "4202:80"
